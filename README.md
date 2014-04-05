@@ -92,7 +92,7 @@ The first thing you will need to do, is modify your QUnit test file. You will ha
 
     });
 
-Then in your HTML file, you will need to explicitly run your test suite. Assuming that your QUnit test HTML file is in the same directory as your test JavaScript file, you will have to do something like this:
+Then in your HTML file, you will need to explicitly run your test suite. Assuming that your QUnit test HTML file is in the same directory as your test JavaScript file, you will have to include a reference to `QUnitTestSuite.js` and then run your test using `QUnitTestSuite#run(String)`: 
 
     <html>
     <head>
@@ -105,10 +105,13 @@ Then in your HTML file, you will need to explicitly run your test suite. Assumin
     <div id="qunit-fixture"></div>
     <script src="../js/qunit/qunit.js"></script>
     <script src="../js/jquery/jquery.js"></script>
+
+    <!-- QUnitTestSuite.js will always be inside /qunit -->
     <script src="../qunit/QUnitTestSuite.js"></script>
     <script src="../js/complex/complex.js"></script>
     <script type="text/javascript">
-        //This is where the magic happens!
+        <!-- Instruct QUnitTestSuite to run the test. This sets up some bootstrapping that allows 
+             QUnit to talk to PhantomJS -->
         QUnitTestSuite.run("./complexTest.js");
     </script>
     </body>
