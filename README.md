@@ -92,7 +92,7 @@ The first thing you will need to do, is modify your QUnit test file. You will ha
 
     });
 
-Then in your HTML file (**which must end in Test.html. So for example, a file like `complexTest.html`**), you will need to explicitly run your test suite. Assuming that your QUnit test HTML file is in the same directory as your test JavaScript file, you will have to include a reference to `QUnitTestSuite.js` and then run your test using `QUnitTestSuite#run(String)`: 
+Then in your HTML file (**which must end in `Test.html`. So for example, a file like `complexTest.html`**), you will need to explicitly run your test suite. Assuming that your QUnit test HTML file is in the same directory as your test JavaScript file, you will have to include a reference to `QUnitTestSuite.js` and then run your test using `QUnitTestSuite#run(String)`: 
 
     <html>
     <head>
