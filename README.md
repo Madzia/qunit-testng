@@ -1,4 +1,4 @@
-##QUnit and TestNG Integrating in Maven using PhantomJS
+##QUnit and TestNG Integration in Maven using PhantomJS
 
 ### What is this?
 
